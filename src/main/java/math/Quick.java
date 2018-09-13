@@ -8,6 +8,7 @@ package math;
 public class Quick {
 
     public int[] quickSort(int[] array, int low, int high) {
+        //
         return array;
     }
 
