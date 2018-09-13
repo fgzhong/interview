@@ -1,0 +1,8 @@
+
+ Q1:  进程与线程
+
+ Q2：线程
+ A2：线程状态：新建new —— 就绪runnable —— 运行running —— 阻塞block —— 死亡dead
+     实现方法：a/实现Runnable接口；b/重写Thread的run方法
+     线程通信：wait(); notify();
+     区别：sleep()/wait():  sleep
