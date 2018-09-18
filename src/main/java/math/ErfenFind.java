@@ -18,11 +18,13 @@ public class ErfenFind {
 
     // 引申题 -- 查找数组中 >=des最小值的所在位置
     public int findCloser(int[] array, int des, int low, int high){
-        // if (low > high) return -1;
-        // int mid = (low + high) >> 1;
-        // if (array[mid] == des) return mid;
-        // if (array[mid] > des) return find(array, des, low, mid-1);
-        // if (array[mid] < des) return find(array, des, mid+1, high);
+        // if (array[0] > des) return 0;
+        // if (array[array.length-1] < des) return -1;
+        if (low >= high) return low;
+        int mid = (low + high) >> 1;
+        if (array[mid] == des) return mid;
+        if (array[mid] > des) return find(array, des, low, mid);
+        if (array[mid] < des) return find(array, des, mid, high);
         return -1;
     }
 }

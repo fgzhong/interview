@@ -1,7 +1,10 @@
+import keyword.StaticT;
 import keyword.Sync;
 
 public class main {
     public static void main(String[] args) {
-        Sync sync = new Sync();
+
+        StaticT staticT = new StaticT();
+        System.out.println(staticT);
     }
 }
