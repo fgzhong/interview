@@ -3,7 +3,7 @@ package math;
 /**
  * @Author create by fgzhong
  * @Date 2018/9/13
- * @Description
+ * @Description  二分查找
  */
 public class ErfenFind {
 
@@ -11,8 +11,8 @@ public class ErfenFind {
         if (low > high) return -1;
         int mid = (low + high) >> 1;
         if (array[mid] == des) return mid;
-        if (array[mid] > des) return find(array, des, low, mid-1);
-        if (array[mid] < des) return find(array, des, mid+1, high);
+        else if (array[mid] > des) return find(array, des, low, mid-1);
+        else if (array[mid] < des) return find(array, des, mid+1, high);
         return -1;
     }
 
@@ -20,7 +20,7 @@ public class ErfenFind {
     public int findCloser(int[] array, int des, int low, int high){
         // if (array[0] > des) return 0;
         // if (array[array.length-1] < des) return -1;
-        if (low >= high) return low;
+        if (low >= high-1) return high;
         int mid = (low + high) >> 1;
         if (array[mid] == des) return mid;
         if (array[mid] > des) return find(array, des, low, mid);

@@ -1,4 +1,5 @@
 import keyword.Sync;
+import math.ErfenFind;
 
 /**
  * @Author create by fgzhong
@@ -6,32 +7,12 @@ import keyword.Sync;
  * @Description
  */
 public class test {
-    public synchronized void a1(){
-        System.out.println("111");
-        try {
-            Thread.sleep(2000);
-        }catch (Exception e){}
-    }
-    public synchronized void a2(){
-        System.out.println("222");
+    public static void a1(final main main){
+        main.setI(3);
+        System.out.println(main.getI());
     }
     public static void main(String[] args) {
-        final test tests = new test();
-        for (int i = 0; i < 2; i++) {
-            Thread f = new Thread(){
-                @Override
-                public void run(){
-                    tests.a1();
-                }
-            };
-            Thread g = new Thread(){
-                @Override
-                public void run(){
-                    tests.a2();
-                }
-            };
-            f.start();
-            g.start();
-        }
+        main main = new main();
+        test.a1(main);
     }
 }

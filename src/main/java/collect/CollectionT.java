@@ -1,8 +1,6 @@
 package collect;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 import java.util.concurrent.DelayQueue;
 
 /**
@@ -27,6 +25,16 @@ public class CollectionT {
     {
         stack.peek(); stack.pop(); stack.add(null); stack.empty();
     }
+
+    // List 有序、可重复                      底层  查询  增删  线程  效率
+    List arrayList = new ArrayList(); //     数组   快    慢   不    高
+    List vector = new Vector();      //      数组   快    慢   安全  低
+    List linkedList = new LinkedList(); //   连表   慢    快   不    高
+
+    // Set 无序、不可重复
+    Set hashSet = new HashSet();   //  哈希表，  hashCode()、equals()
+    Set linkedHashSet = new LinkedHashSet();  //  链表+哈希表
+    Set treeSet = new TreeSet();   //  红黑树 Compareable()接口
 
     public class StackT<E> {
         private Object[] eles;
